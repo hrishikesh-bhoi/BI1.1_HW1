@@ -2,7 +2,7 @@ import useFetch from "../useFetch"
 
 const BooksByAuthor = ({author}) => {
 
-    const { data, loading, error } = useFetch(`https://be-4-assignment1-sandy.vercel.app/books/author/${author}`)
+    const { data, loading, error } = useFetch(`https://be-4-assignment1-sandy.vercel.app/books/author/${encodeURIComponent(author)}`)
 
     console.log(data);
 
